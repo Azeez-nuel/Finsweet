@@ -1,16 +1,29 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
 }
 
+/* header styling */
 header {
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    position: fixed;
+}
+
+header .container {
     width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto ;
-    padding: 14px 10px;
+    padding: 10px 0;
+    background-color: white;
 }
 
 header .logo {
@@ -41,14 +54,35 @@ nav .right-contact {
     column-gap: 10px;
 }
 
+nav .right-contact .right-contact-icon {
+    background-color: #61C3A1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .right-contact .right-contact-icon:hover {
+background-color: rgb(67, 4, 4);
+}
+
 nav .right-contact .right-contact-text p {
     font-size: 14px;
     line-height: 18px;
 }
 
-main {
-    height: 91vh;
+/* global styling */
+.container {
+    height: 80%;
     width: 80%;
+    display: flex;
+}
+
+.parent-flex {
+    height: 100vh;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -56,19 +90,56 @@ main {
     justify-content: center;
 }
 
-main .container {
-    height: 80%;
-    width: 100%;
-    display: flex;
-}
-
-main .container .left-text {
+.left {
     width: 50%;
     height: 100%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* background-color: blue; */
 }
+
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: bisque; */
+}
+
+.service-left {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 15px;  
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+/* End global styling */
+
+/* main styling */
+
+/* main .container .left-text {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
 
 main .container .left-text .content {
     width: 80%;
@@ -78,35 +149,45 @@ main .container .left-text .content {
     row-gap: 30px;
 }
 
-
-main .container .left-text .content h1 {
-    width: 80%px;
-    font-size: 50px;
-}
-
-button {
-    color: white;
+.btn {
     background-color:  #FF6433;
-    margin-top: 30px;
+    color: white;
+    padding: 16px 40px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
     width: 190px;
     height: 50px;
-    border-radius: 12px;
-    border: 1px ;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #bf401a;
+    color: black;
+    border-radius: 50px;
+}
+
+main .container .left-text .content h1 {
+    width: 100%px;
+    font-size: 40px;
+    margin-top: 100px;
 }
 
 main .container .left-text .content .bottom-content {
     display: flex;
     align-items: center;
-    column-gap: 30px;
-    margin-top: 20px;
+    column-gap: 20px;
+    margin-bottom: 100px;
 }
 
 main .container .left-text .content .bottom-content-icon {
     font-size: 50px;
 }
 main .container .right-img {
-    width: 50%;
-    height: 100%;
+    /* width: 50%;
+    height: 100%; */
     background-image: url(../img/image.png);
     background-position: center;
     background-size: cover;
@@ -125,4 +206,211 @@ main .container .right-img .rating {
     position: absolute;
     right: -20%;
     bottom: 0;
+}
+
+/* car servicing section */
+.car-service-bg {
+    background-color: #e2e6e9;
+}
+
+.car-service-bg .list {
+    width: 80%;
+}
+
+.car-service-bg .container .left .know-more {
+    display: flex;
+    margin: 60px;
+    margin-top: 60px;
+    font-size: 20px;
+    justify-content: space-evenly;
+}
+
+label {
+    display: block;
+    margin-top: 2px;
+}
+
+input {
+    width: 500px;
+    height: 50px;
+    border: none;
+}
+
+.form .btn {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+/* get a quote */
+
+.get-a-quote .container .left .left-text {
+    padding: 20px;
+}
+
+.get-a-quote .container .left h1 {
+    font-size: 40px;
+    width: 80%;
+}
+
+.get-a-quote .container .left .btn {
+    margin-top: 20px;
+}
+
+.get-a-quote .list {
+    width: 70%;
+}
+
+.get-a-quote .container .right .list .service-left {
+    margin-bottom: 40px;
+}
+
+.get-a-quote .container .right .list .service-left h3 {
+    font-size: 20px;
+}
+
+/* what we offer */
+
+#what-we-offer {
+    background-color: #f2f2f2;
+}
+#what-we-offer .content {
+    width: 100%;
+    text-align: center;
+}
+
+#what-we-offer .content .what-we-offer-cards {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    gap: 5px;
+    justify-content: center;
+}
+
+#what-we-offer .content .what-we-offer-cards .card {
+    background-color: white;
+    height: 200px;
+    width: 200px;
+}
+
+#what-we-offer .content .what-we-offer-cards .card .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+/* Get in touch */
+#get-in-touch {
+    height: 70vh;
+    width: 100%;
+}
+
+#get-in-touch .first-row {
+    height: 75%;
+    width: 100%;
+    display: flex;
+}
+
+#get-in-touch .first-row .left-car {
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/Car\ left.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#get-in-touch .first-row .left-car .left-car-card {
+    height: 100%;
+    width: 70%;
+    background-color: #ff6433;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px; 
+}
+
+#get-in-touch .first-row .left-car .left-car-card h1 {
+    color: white;
+    font-size: 30px;
+    text-align: left;
+}
+
+#get-in-touch .first-row .left-car .left-car-card button {
+    background-color: #1E1B1B;
+    color: white;
+    padding: 16px 40px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    width: 150px;
+    height: 50px;
+    
+}
+#get-in-touch .first-row .right-car{
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/Car\ right.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#get-in-touch .second-row {
+    height: 25%;
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#get-in-touch .second-row .container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#get-in-touch .second-row .container h1 {
+    color: #661CE7;
+}
+
+/* footer section */
+
+.footer-bg {
+    background-color: black;
+}
+
+/* For mobile */
+@media screen and (max-width: 425px) {
+    #header .container {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        column-gap: 20px;
+        border: none;
+    }
+
+    nav ul li {
+        font-size: 12px;
+    }
+}
+
+/* For tablet */
+@media screen and (max-width: 730px)  {
+    
 }
