@@ -132,15 +132,6 @@ h2 {
 
 /* main styling */
 
-/* main .container .left-text {
-    width: 50%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
-
 main .container .left-text .content {
     width: 80%;
     display: flex;
@@ -153,7 +144,7 @@ main .container .left-text .content {
     background-color:  #FF6433;
     color: white;
     padding: 16px 40px;
-    margin-top: 10px;
+    margin-top: 15px;
     border: none;
     border-radius: 12px;
     width: 190px;
@@ -187,7 +178,7 @@ main .container .left-text .content .bottom-content-icon {
 }
 main .container .right-img {
     /* width: 50%;
-    height: 100%; */
+    height: 100vh; */
     background-image: url(../img/image.png);
     background-position: center;
     background-size: cover;
@@ -227,7 +218,7 @@ main .container .right-img .rating {
 
 label {
     display: block;
-    margin-top: 2px;
+    margin-top: 5px;
 }
 
 input {
@@ -347,9 +338,8 @@ input {
     border-radius: 12px;
     width: 150px;
     height: 50px;
-    
 }
-#get-in-touch .first-row .right-car{
+#get-in-touch .first-row .right-car {
     width: 50%;
     height: 100%;
     background-image: url(../img/Car\ right.png);
@@ -384,9 +374,192 @@ input {
     background-color: black;
 }
 
+/* For tablet */
+@media screen and (min-width: 425px) and (max-width: 850px)  {
+    .parent-flex{
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 20px 10px;
+        row-gap: 20px;
+        height: auto;
+    }
+    
+    header .container {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        column-gap: 30px;
+        border: none;
+    }
+
+    nav ul li {
+        font-size: 20px;
+    }
+
+    nav .right-contact .right-contact-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    nav .right-contact .right-contact-icon .icon {
+        font-size: 15px;
+    }
+
+    nav .right-contact .right-contact-text p {
+        font-size: 15px;
+    }
+
+    .left,.right {
+        width: 100%;
+    }
+
+    main .container .right-img {
+        height: 70vh;
+    }
+
+    main {
+        position: relative;
+    }
+
+    .main-left {
+        position: absolute;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-left .content {
+        align-items: center;
+        padding-top: 50%;
+    }
+
+    main .container .left-text .content h1 {
+        font-size: 60px;
+        color: white;
+    }
+
+    main .container .left-text .content .bottom-content  {
+        color: white;
+        font-size: larger;
+    }
+
+    .btn {
+    background-color:  #FF6433;
+    color: white;
+    padding: 26px 50px;
+    margin-top: 15px;
+    font-size: 25px;
+    width: 300px;
+    height: 80px;
+    }
+
+    .service {
+        bottom: 0%;
+        display: none;
+    }
+
+    .rating {
+        bottom: 0%;
+        display: none;
+    }
+
+    input {
+        width: 700px;
+    }
+
+    #what-we-offer .content h6 {
+        font-size: 25px;
+    }
+
+    #what-we-offer .content .what-we-offer-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    #what-we-offer .content .what-we-offer-cards .card {
+        height: 200px;
+        width: 250px;
+    }
+
+    #get-in-touch {
+        height: auto;
+    }
+
+    #get-in-touch .first-row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #get-in-touch .first-row .left-car {
+        width: 100%;
+        height: 30vh;
+    }
+
+    #get-in-touch .first-row .right-car {
+        height: 30vh;
+        width: 100%;
+    }
+
+    #get-in-touch .second-row {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    #get-in-touch .second-row .container {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #get-in-touch .second-row .container .one {
+        width: 50%;
+        text-align: center;
+    }
+
+    #get-in-touch .second-row .container .one p {
+        font-size: 20px;
+    }
+
+    #get-in-touch .second-row .container .one h1 {
+        font-size: 30px;
+    }
+}
+
 /* For mobile */
 @media screen and (max-width: 425px) {
-    #header .container {
+
+    /* global */
+    .parent-flex {
+        height: auto;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    header {
+        position: static;
+    }
+    
+    header .container {
         width: 100%;
         padding: 10px;
         flex-direction: column;
@@ -408,9 +581,128 @@ input {
     nav ul li {
         font-size: 12px;
     }
+
+    nav .right-contact .right-contact-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    nav .right-contact .right-contact-icon .icon {
+        font-size: 12px;
+    }
+
+    nav .right-contact .right-contact-text p {
+        font-size: 12px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 10px 10px;
+        row-gap: 20px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    main .container .left-text .content {
+        text-align: center;
+        width: 100%;
+    }
+
+    main .container .right-img {
+        height: 50vh;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .btn {
+        padding: 7px 20px;
+        margin-left: 80px;
+    }
+
+    main .container .right-img .rating {
+        right: -3%;
+    }
+
+    input {
+        width: 300px;
+    }
+
+    #what-we-offer .content .what-we-offer-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    #what-we-offer .content .what-we-offer-cards .card {
+        height: 150px;
+        width: 150px;
+    }
+
+    #get-in-touch {
+        height: auto;
+    }
+
+    #get-in-touch .first-row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #get-in-touch .first-row .left-car {
+        width: 100%;
+    }
+
+    #get-in-touch .first-row .right-car {
+        height: 30vh;
+        width: 100%;
+    }
+
+    #get-in-touch .second-row {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    #get-in-touch .second-row .container {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #get-in-touch .second-row .container .one {
+        width: 50%;
+        text-align: center;
+    }
+
+    #get-in-touch .second-row .container .one p {
+        font-size: 14px;
+    }
+
+    #get-in-touch .second-row .container .one h1 {
+        font-size: 20px;
+    }
+
+    #get-in-touch .first-row .left-car .left-car-card h1 {
+        font-size: 25px;
+        padding-top: 20px;
+    }
+
+    #get-in-touch .first-row .left-car .left-car-card button {
+        background-color: #1E1B1B;
+        color: white;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 12px;
+        width: 120px;
+        height: 40px;
+    }
 }
 
-/* For tablet */
-@media screen and (max-width: 730px)  {
-    
-}
